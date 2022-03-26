@@ -1,0 +1,1 @@
+while true; do ./priceCheckOTE.sh; sleep 600; done

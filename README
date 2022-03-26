@@ -1,0 +1,4 @@
+potentially missing packages:
+pip3 install datetime forex-python MIMEText MIMEMultipart xlrd
+
+
