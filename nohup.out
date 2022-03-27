@@ -1,0 +1,72 @@
+--2022-03-26 19:10:32--  https://www.ote-cr.cz/pubweb/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving www.ote-cr.cz (www.ote-cr.cz)... 91.209.101.18
+Connecting to www.ote-cr.cz (www.ote-cr.cz)|91.209.101.18|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls [following]
+--2022-03-26 19:10:33--  https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Reusing existing connection to www.ote-cr.cz:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 35328 (34K) [application/vnd.ms-excel]
+Saving to: ‘26_03_2022_EN.xls’
+
+     0K .......... .......... .......... ....                 100%  647K=0.05s
+
+2022-03-26 19:10:33 (647 KB/s) - ‘26_03_2022_EN.xls’ saved [35328/35328]
+
+--2022-03-26 19:20:38--  https://www.ote-cr.cz/pubweb/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving www.ote-cr.cz (www.ote-cr.cz)... 91.209.101.18
+Connecting to www.ote-cr.cz (www.ote-cr.cz)|91.209.101.18|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls [following]
+--2022-03-26 19:20:38--  https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Reusing existing connection to www.ote-cr.cz:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 35328 (34K) [application/vnd.ms-excel]
+Saving to: ‘26_03_2022_EN.xls’
+
+     0K .......... .......... .......... ....                 100% 1.76M=0.02s
+
+2022-03-26 19:20:38 (1.76 MB/s) - ‘26_03_2022_EN.xls’ saved [35328/35328]
+
+--2022-03-26 19:30:45--  https://www.ote-cr.cz/pubweb/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving www.ote-cr.cz (www.ote-cr.cz)... 91.209.101.18
+Connecting to www.ote-cr.cz (www.ote-cr.cz)|91.209.101.18|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls [following]
+--2022-03-26 19:30:45--  https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Reusing existing connection to www.ote-cr.cz:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 35328 (34K) [application/vnd.ms-excel]
+Saving to: ‘26_03_2022_EN.xls’
+
+     0K .......... .......... .......... ....                 100% 3.12M=0.01s
+
+2022-03-26 19:30:46 (3.12 MB/s) - ‘26_03_2022_EN.xls’ saved [35328/35328]
+
+--2022-03-26 19:40:52--  https://www.ote-cr.cz/pubweb/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving www.ote-cr.cz (www.ote-cr.cz)... 91.209.101.18
+Connecting to www.ote-cr.cz (www.ote-cr.cz)|91.209.101.18|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls [following]
+--2022-03-26 19:40:52--  https://www.ote-cr.cz/attachments/27/2022/month03/day26/26_03_2022_EN.xls
+SSL_INIT
+Reusing existing connection to www.ote-cr.cz:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 35328 (34K) [application/vnd.ms-excel]
+Saving to: ‘26_03_2022_EN.xls’
+
+     0K .......... .......... .......... ....                 100% 2.83M=0.01s
+
+2022-03-26 19:40:52 (2.83 MB/s) - ‘26_03_2022_EN.xls’ saved [35328/35328]
+

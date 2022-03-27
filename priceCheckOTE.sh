@@ -19,5 +19,5 @@ function year() {
 # month=$(month)
 # year=$(year)
 
-wget https://www.ote-cr.cz/pubweb/attachments/$(tomorrow)/$(year)/month$(month)/day$(day)/$(day)_$(month)_$(year)_EN.xls &&
+wget https://www.ote-cr.cz/pubweb/attachments/$(day)/$(year)/month$(month)/day$(day)/$(day)_$(month)_$(year)_EN.xls &&
 python3 ote_warning.py

@@ -12,7 +12,7 @@
 
 
 ### global setting
-price_warning_level = 200 #at what price the email will be sent, EUR/MWh
+price_warning_level = 100 #at what price the email will be sent, EUR/MWh
 receiver_email = "strelecek.jan@seznam.cz" 
 
 
@@ -24,8 +24,8 @@ import datetime
 today = date.today()
 # tomorrow = today + datetime.timedelta(days=1)
 
-html="https://www.ote-cr.cz/en/short-term-markets/electricity/day-ahead-market?date="+today.strftime('%Y_%m_%d')
-
+# htmlTomorrow="https://www.ote-cr.cz/en/short-term-markets/electricity/day-ahead-market?date="+today.strftime('%Y_%m_%d')
+html = "https://www.ote-cr.cz/en/short-term-markets/electricity/intra-day-market?date="+today.strftime('%Y-%m-%d')
 
 
 ###send email
@@ -45,7 +45,7 @@ def sendMail(price):
     <html>
         <body>
             <h4>Automatický skript zaznamenal zvýšenou cenu energií.<h4>
-            <h1>Aktuální cena: """ + str('%.2f'%price) + """ Kč <h1>
+            <h1>Aktuální cena: """ + str('%.2f'%price) + """ Kč/kWh <h1>
             <h2><a href=""" + str(html) + """>Zdroj OTE</a> <h2>
         </body>
     </html>
@@ -80,11 +80,11 @@ hour = datetime.datetime.now().hour
 
 file = xlrd.open_workbook(filename)
 sh = file.sheet_by_index(0)
-price_now = sh.cell_value(rowx=6+hour, colx=2)
+price_now = sh.cell_value(rowx=5+hour, colx=2)
 
 if(price_now > price_warning_level):
-    sendMail(c.convert("CZK",'EUR',price_now)
-)
+    sendMail(c.convert('EUR',"CZK",price_now)/1000) #converts EUR/MWh to CZK/kWh
+
 
 
 ### plot
