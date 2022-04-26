@@ -12,7 +12,7 @@
 
 
 ### global setting
-price_warning_level = 700 #at what price the email will be sent, EUR/MWh
+price_warning_level = 180 #at what price the email will be sent, EUR/MWh
 receiver_email = "strelecek.jan@seznam.cz" 
 
 
@@ -80,7 +80,7 @@ hour = datetime.datetime.now().hour
 
 file = xlrd.open_workbook(filename)
 sh = file.sheet_by_index(0)
-price_now = sh.cell_value(rowx=5+hour, colx=2)
+price_now = sh.cell_value(rowx=6+hour, colx=2)
 
 if(price_now > price_warning_level):
     sendMail(c.convert('EUR',"CZK",price_now)/1000) #converts EUR/MWh to CZK/kWh
