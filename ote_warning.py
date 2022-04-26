@@ -12,7 +12,7 @@
 
 
 ### global setting
-price_warning_level = 100 #at what price the email will be sent, EUR/MWh
+price_warning_level = 700 #at what price the email will be sent, EUR/MWh
 receiver_email = "strelecek.jan@seznam.cz" 
 
 
@@ -38,13 +38,13 @@ def sendMail(price):
     port = 465  # For SSL
     context = ssl.create_default_context()
 
-    smtp_server    = "smtp.seznam.cz"
-    sender_email   = "oteinfo@seznam.cz"
-    password_email = "warn-me-please"
+    smtp_server    = "smtp.gmail.com"
+    sender_email   = "oteinfowarn@gmail.com"
+    password_email = ""
     text        = """\
     <html>
         <body>
-            <h4>Automatický skript zaznamenal zvýšenou cenu energií.<h4>
+            <h4>Automatický skript zaznamenal zvýšenou cenu elektrických energií.<h4>
             <h1>Aktuální cena: """ + str('%.2f'%price) + """ Kč/kWh <h1>
             <h2><a href=""" + str(html) + """>Zdroj OTE</a> <h2>
         </body>
@@ -52,7 +52,7 @@ def sendMail(price):
     """
 
     message = MIMEMultipart("alternative")
-    message["Subject"] = "potenciálně vysoké ceny energií"
+    message["Subject"] = "potenciálně vysoké ceny elektřiny"
     message["From"] = sender_email
     message["To"] = receiver_email
 
@@ -75,7 +75,7 @@ from forex_python.converter import CurrencyRates #for conversion from EUR to CZK
 
 c = CurrencyRates()
 
-filename = today.strftime('%d_%m_%Y') +"_EN.xls"
+filename = 'temp_dailyMarketStats.xls' #today.strftime('%d_%m_%Y') +"_EN.xls"
 hour = datetime.datetime.now().hour
 
 file = xlrd.open_workbook(filename)
@@ -84,11 +84,6 @@ price_now = sh.cell_value(rowx=5+hour, colx=2)
 
 if(price_now > price_warning_level):
     sendMail(c.convert('EUR',"CZK",price_now)/1000) #converts EUR/MWh to CZK/kWh
-
-
-
-### plot
-
 
 
 

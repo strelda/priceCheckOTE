@@ -1,7 +1,5 @@
 #!/bin/bash
 
-rm *.xls
-
 function day() {
 	date -d today '+%d'       
 }
@@ -15,9 +13,9 @@ function year() {
 	date -d today '+%Y'       
 }
 
-# day=$(day)
-# month=$(month)
-# year=$(year)
+curl 'https://www.ote-cr.cz/en/short-term-markets/electricity/intra-day-market?date=$(year)-$(month)-$(day)&set_language=en' > temp_dailyMarketPage
 
-wget https://www.ote-cr.cz/pubweb/attachments/$(day)/$(year)/month$(month)/day$(day)/$(day)_$(month)_$(year)_EN.xls &&
+FILENAME=$(grep "/pubweb/attachments/" temp_dailyMarketPage | awk -F '"' '{print $2}')
+wget https://www.ote-cr.cz/${FILENAME} -O temp_dailyMarketStats.xls
+
 python3 ote_warning.py
