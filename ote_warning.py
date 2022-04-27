@@ -84,7 +84,9 @@ price_now = sh.cell_value(rowx=6+hour, colx=2)
 
 if(price_now > price_warning_level):
     sendMail(c.convert('EUR',"CZK",price_now)/1000) #converts EUR/MWh to CZK/kWh
-
+    print('mail sent with price {}, which is above {}'.format(price_now, price_warning_level))
+else:
+    print('price is {}, this is below warning level {}'.format(price_now, price_warning_level))
 
 
 ### simple mail format, goes to spam
